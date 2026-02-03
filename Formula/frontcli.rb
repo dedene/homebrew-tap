@@ -5,21 +5,21 @@
 class Frontcli < Formula
   desc "CLI for Front.app - manage conversations, messages, contacts, and more"
   homepage "https://github.com/dedene/frontapp-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/frontapp-cli/releases/download/v0.1.1/frontcli_0.1.1_darwin_amd64.tar.gz"
-      sha256 "a2490d0cbf158d28b664aa385799af1211d945e239eca928af0443f8565d48f8"
+      url "https://github.com/dedene/frontapp-cli/releases/download/v0.1.2/frontcli_0.1.2_darwin_amd64.tar.gz"
+      sha256 "d12001b38d65f8392de77b1bf620b8409ea465c4c81a93a03e46453598d0b50f"
 
       def install
         bin.install "frontcli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/frontapp-cli/releases/download/v0.1.1/frontcli_0.1.1_darwin_arm64.tar.gz"
-      sha256 "2de7f5fe45d51de6f86c6f58f149d3884204008b2e71e256112ce41f257bd36a"
+      url "https://github.com/dedene/frontapp-cli/releases/download/v0.1.2/frontcli_0.1.2_darwin_arm64.tar.gz"
+      sha256 "8890b49b28bea43dc5f4844fdc39b65bfb4a703541b3472bb49f6f3b030965b7"
 
       def install
         bin.install "frontcli"
@@ -29,15 +29,15 @@ class Frontcli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/frontapp-cli/releases/download/v0.1.1/frontcli_0.1.1_linux_amd64.tar.gz"
-      sha256 "4d150d2c0fa87d70749c227d804d8bc1abd0c0cd606253bdc8e179c9fdbc703e"
+      url "https://github.com/dedene/frontapp-cli/releases/download/v0.1.2/frontcli_0.1.2_linux_amd64.tar.gz"
+      sha256 "0a30ab12828e0b89fd5aa217f1be33f2b33a0a5f217befdd635f501fa7513dc6"
       def install
         bin.install "frontcli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/frontapp-cli/releases/download/v0.1.1/frontcli_0.1.1_linux_arm64.tar.gz"
-      sha256 "88f2eaec3066bf372b3357992b51756b0f1ae3773646a7b168910ddd6bbf6a3c"
+      url "https://github.com/dedene/frontapp-cli/releases/download/v0.1.2/frontcli_0.1.2_linux_arm64.tar.gz"
+      sha256 "f4e8dab43fa50d79978e78c550b7e3dbad72e60173fbe7f77d3ab45ad8b00f9c"
       def install
         bin.install "frontcli"
       end
