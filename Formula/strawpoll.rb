@@ -5,21 +5,21 @@
 class Strawpoll < Formula
   desc "CLI for StrawPoll - create and manage polls from the command line"
   homepage "https://github.com/dedene/strawpoll-cli"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/strawpoll-cli/releases/download/v0.1.3/strawpoll_darwin_amd64.tar.gz"
-      sha256 "143f5f9e19755ddf784b02dcfb47005381542ea5177843cc9d9ba486a18b7f83"
+      url "https://github.com/dedene/strawpoll-cli/releases/download/v0.1.4/strawpoll_darwin_amd64.tar.gz"
+      sha256 "01c54f9a4a1f66c2f10704a21ba964bb61525b97f4a64b636a7ff497d4be4c53"
 
       def install
         bin.install "strawpoll"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/strawpoll-cli/releases/download/v0.1.3/strawpoll_darwin_arm64.tar.gz"
-      sha256 "466467b6abbadb0bf5981cc6ec8657f0e4f0f129cca56348e90f12bef92d7497"
+      url "https://github.com/dedene/strawpoll-cli/releases/download/v0.1.4/strawpoll_darwin_arm64.tar.gz"
+      sha256 "365924aafe12644bf6ba3a0af4b86af99e0e20636ffcbd3c592924a10999cd4d"
 
       def install
         bin.install "strawpoll"
@@ -29,15 +29,15 @@ class Strawpoll < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/strawpoll-cli/releases/download/v0.1.3/strawpoll_linux_amd64.tar.gz"
-      sha256 "ebf146cdcbaf9b4a74ea2262de531b751b53a3e36ba37440097b6889f5f7c4d0"
+      url "https://github.com/dedene/strawpoll-cli/releases/download/v0.1.4/strawpoll_linux_amd64.tar.gz"
+      sha256 "e9e3d9742413fa7ab7c61e39d76b91aa7ba11726d3701f561caf79c878fe9c47"
       def install
         bin.install "strawpoll"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/strawpoll-cli/releases/download/v0.1.3/strawpoll_linux_arm64.tar.gz"
-      sha256 "f7e4dad8f22ca0889327adcb2402771bf1ae46e81082f23da568ab1d1cf4508d"
+      url "https://github.com/dedene/strawpoll-cli/releases/download/v0.1.4/strawpoll_linux_arm64.tar.gz"
+      sha256 "5be9609b994fbf39581b7a2f90ccf8e17d7e4f950aea06be468837f7bfb5cb98"
       def install
         bin.install "strawpoll"
       end
