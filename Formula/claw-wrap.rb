@@ -5,22 +5,42 @@
 class ClawWrap < Formula
   desc "Credential proxy for CLI tools — secrets never enter the sandbox"
   homepage "https://github.com/dedene/claw-wrap"
-  version "0.1.6"
+  version "0.2.0"
   license "MIT"
-  depends_on :linux
 
-  if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/dedene/claw-wrap/releases/download/v0.1.6/claw-wrap_0.1.6_linux_amd64.tar.gz"
-    sha256 "153a451bd51631cd7bb6223a6cb8ae9c3b527e1fd26ae4205cede53f5863d48c"
-    def install
-      bin.install "claw-wrap"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.2.0/claw-wrap_0.2.0_darwin_amd64.tar.gz"
+      sha256 "784c5b51a26adbd5f79041df5afdc4545f4a034eca936334a2358a946a99b211"
+
+      def install
+        bin.install "claw-wrap"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.2.0/claw-wrap_0.2.0_darwin_arm64.tar.gz"
+      sha256 "85f475d5ddf90f6efb35dd56e96309465d8c9ab5d741e16681a23aeb52b92f55"
+
+      def install
+        bin.install "claw-wrap"
+      end
     end
   end
-  if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/dedene/claw-wrap/releases/download/v0.1.6/claw-wrap_0.1.6_linux_arm64.tar.gz"
-    sha256 "ead193d610969c49c88ff415d3a2d826b462a00f79c4a221321c0febed6458b8"
-    def install
-      bin.install "claw-wrap"
+
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.2.0/claw-wrap_0.2.0_linux_amd64.tar.gz"
+      sha256 "32aefceada51bb5297a82d2d6870d7f53ed2c2e7fb9eda59553405233626a8ad"
+      def install
+        bin.install "claw-wrap"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.2.0/claw-wrap_0.2.0_linux_arm64.tar.gz"
+      sha256 "206d82e40e95a75694ce13ecca94e2b52ebe85f6c1cda02e27786298e4367af9"
+      def install
+        bin.install "claw-wrap"
+      end
     end
   end
 
