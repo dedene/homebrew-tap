@@ -5,20 +5,20 @@
 class ClawWrap < Formula
   desc "Credential proxy for CLI tools — secrets never enter the sandbox"
   homepage "https://github.com/dedene/claw-wrap"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
   depends_on :linux
 
   if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/dedene/claw-wrap/releases/download/v0.1.3/claw-wrap_0.1.3_linux_amd64.tar.gz"
-    sha256 "c42264f88f26bf03cedef835f725d4ff15663e361983353fe1c97495442820fa"
+    url "https://github.com/dedene/claw-wrap/releases/download/v0.1.4/claw-wrap_0.1.4_linux_amd64.tar.gz"
+    sha256 "18d08304f946417a944aad7c5cfcf3e1cd03927e4bf98d319ef255af41ec8c84"
     def install
       bin.install "claw-wrap"
     end
   end
   if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/dedene/claw-wrap/releases/download/v0.1.3/claw-wrap_0.1.3_linux_arm64.tar.gz"
-    sha256 "950f5ad2fbe247c597542f73af5d4e35673aabe481ec491fdcd58eefcc573eec"
+    url "https://github.com/dedene/claw-wrap/releases/download/v0.1.4/claw-wrap_0.1.4_linux_arm64.tar.gz"
+    sha256 "fd250ec5717ea12b386ae930fea30e4ae5416914ec499ebe2960cb12dab84475"
     def install
       bin.install "claw-wrap"
     end
