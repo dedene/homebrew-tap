@@ -5,21 +5,21 @@
 class Kmi < Formula
   desc "CLI for KMI/IRM Belgian weather API - forecasts, radar, warnings, pollen"
   homepage "https://github.com/dedene/kmi-irm-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/kmi-irm-cli/releases/download/v0.1.0/kmi_0.1.0_darwin_amd64.tar.gz"
-      sha256 "8a5bbfd4e390e296b977377fcddcdc295357d28d747cda14546b30e70bd1b4de"
+      url "https://github.com/dedene/kmi-irm-cli/releases/download/v0.1.1/kmi_0.1.1_darwin_amd64.tar.gz"
+      sha256 "1fd7bc346cd0bf99b9c4d9119a11174b789c3e99022a28968b3a2d8359024dcf"
 
       def install
         bin.install "kmi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/kmi-irm-cli/releases/download/v0.1.0/kmi_0.1.0_darwin_arm64.tar.gz"
-      sha256 "9c45b3f52a4b5cb6dd6a5c967232195c861750e6a9d3bea07dbc4d732b188dca"
+      url "https://github.com/dedene/kmi-irm-cli/releases/download/v0.1.1/kmi_0.1.1_darwin_arm64.tar.gz"
+      sha256 "3fac9d458e84ea17f2e9f8e1a0bd2334213000c402176d48c90e88eac0d6ba9d"
 
       def install
         bin.install "kmi"
@@ -29,15 +29,15 @@ class Kmi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/kmi-irm-cli/releases/download/v0.1.0/kmi_0.1.0_linux_amd64.tar.gz"
-      sha256 "9eea82cb7a43ba26ba1aa11c2678baa7539124bfba599da734f271f8c851e7ab"
+      url "https://github.com/dedene/kmi-irm-cli/releases/download/v0.1.1/kmi_0.1.1_linux_amd64.tar.gz"
+      sha256 "c7aecd9cff41f92600c03890258827df27d4a78761d74a12fad8a38e06bc832b"
       def install
         bin.install "kmi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/kmi-irm-cli/releases/download/v0.1.0/kmi_0.1.0_linux_arm64.tar.gz"
-      sha256 "71e86e230739d6d32b38533cb8b7f854fbce5cf00c9e149c337750786edc8ad5"
+      url "https://github.com/dedene/kmi-irm-cli/releases/download/v0.1.1/kmi_0.1.1_linux_arm64.tar.gz"
+      sha256 "168fa0b2f96e040d33467ef5c0efde1dcce19fe238fe78b1d91c0bd0b46ff8e2"
       def install
         bin.install "kmi"
       end
