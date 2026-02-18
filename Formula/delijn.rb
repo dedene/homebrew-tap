@@ -5,21 +5,21 @@
 class Delijn < Formula
   desc "CLI for De Lijn - Flemish public transport departures, stops, and routes"
   homepage "https://github.com/dedene/delijn-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/delijn-cli/releases/download/v0.1.0/delijn_0.1.0_darwin_amd64.tar.gz"
-      sha256 "f91cd2eb456be870847df98c60b75c62d9517b86cf863dd583fafa1a032473fc"
+      url "https://github.com/dedene/delijn-cli/releases/download/v0.1.1/delijn_0.1.1_darwin_amd64.tar.gz"
+      sha256 "ad2779a7b6aabe1755d412936cd1e090153e514cc9c52611b0f019d977d23936"
 
       def install
         bin.install "delijn"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/delijn-cli/releases/download/v0.1.0/delijn_0.1.0_darwin_arm64.tar.gz"
-      sha256 "e1def38d3fd287bef78e32b3d2ce2d53ebd323166b4f71cfbdcb6674d760858a"
+      url "https://github.com/dedene/delijn-cli/releases/download/v0.1.1/delijn_0.1.1_darwin_arm64.tar.gz"
+      sha256 "e05d5eac95c3311eef4d94ebbff2b89e3d3c3072ca0fc0fe0fd6eb9be086861f"
 
       def install
         bin.install "delijn"
@@ -29,15 +29,15 @@ class Delijn < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/delijn-cli/releases/download/v0.1.0/delijn_0.1.0_linux_amd64.tar.gz"
-      sha256 "54402da21c63353bbc0d3e8797201e8d3f807ecdbae232ee6acb5454159fffb6"
+      url "https://github.com/dedene/delijn-cli/releases/download/v0.1.1/delijn_0.1.1_linux_amd64.tar.gz"
+      sha256 "e0579ae87675184c44e2ea4b089ca1451c25f639552e08cd356486a2218ae9ba"
       def install
         bin.install "delijn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/delijn-cli/releases/download/v0.1.0/delijn_0.1.0_linux_arm64.tar.gz"
-      sha256 "03049b2d3a3be993566a3c0c3bc97a96ffd162cdaf16f400e9329c51fcac010f"
+      url "https://github.com/dedene/delijn-cli/releases/download/v0.1.1/delijn_0.1.1_linux_arm64.tar.gz"
+      sha256 "731cedeb27d315090024fdbfa929b585cd4755baf047c5d4195cab229d627cbc"
       def install
         bin.install "delijn"
       end
