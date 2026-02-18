@@ -5,21 +5,21 @@
 class MemelinkCli < Formula
   desc "Generate memes from the terminal"
   homepage "https://github.com/dedene/memelink-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/memelink-cli/releases/download/v0.1.0/memelink-cli_darwin_amd64.tar.gz"
-      sha256 "e463dda8af1d8506fbc8042392a8e96f6c1c6fd4b9b1f1aae03d8c0e9031e0eb"
+      url "https://github.com/dedene/memelink-cli/releases/download/v0.1.1/memelink-cli_darwin_amd64.tar.gz"
+      sha256 "035dae2dbc4a57b630868f7dd4bfc3e49da7af5a12633ee9868cbeb019752a40"
 
       def install
         bin.install "memelink"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/memelink-cli/releases/download/v0.1.0/memelink-cli_darwin_arm64.tar.gz"
-      sha256 "c5feaaa0662c5a3538d595aa82d6b2f0bcfa7b1607ada06cca0ffc0dbb78f595"
+      url "https://github.com/dedene/memelink-cli/releases/download/v0.1.1/memelink-cli_darwin_arm64.tar.gz"
+      sha256 "bb6e4932cd4e0742e2d211d7b76e708ab8687e87f4412eececa417b1a65b4060"
 
       def install
         bin.install "memelink"
@@ -29,15 +29,15 @@ class MemelinkCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/memelink-cli/releases/download/v0.1.0/memelink-cli_linux_amd64.tar.gz"
-      sha256 "d9b7543624835f45d0ba28263178366741d6a76a422b37baebe4939904b7f235"
+      url "https://github.com/dedene/memelink-cli/releases/download/v0.1.1/memelink-cli_linux_amd64.tar.gz"
+      sha256 "36b425021564efb1f738a4f553b84d5e67da24ad87d63493f74941e34c74b40b"
       def install
         bin.install "memelink"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/memelink-cli/releases/download/v0.1.0/memelink-cli_linux_arm64.tar.gz"
-      sha256 "039d807f028a446c589493e6d8463fed266f87e0a1cba40f2eff382268a1493f"
+      url "https://github.com/dedene/memelink-cli/releases/download/v0.1.1/memelink-cli_linux_arm64.tar.gz"
+      sha256 "cff0d1dc08b6d402efd0977afcda1ff3450c78faf79aee3c51ecbc8bdfa8b35f"
       def install
         bin.install "memelink"
       end
