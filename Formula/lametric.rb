@@ -5,21 +5,21 @@
 class Lametric < Formula
   desc "CLI for LaMetric TIME/SKY - control your device from the command line"
   homepage "https://github.com/dedene/lametric-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/lametric-cli/releases/download/v0.1.0/lametric_darwin_amd64.tar.gz"
-      sha256 "9f333f16630aa25d3e7b3a39467df77e53174f380c86aaf2d62eb9b2acc8bb66"
+      url "https://github.com/dedene/lametric-cli/releases/download/v0.1.1/lametric_darwin_amd64.tar.gz"
+      sha256 "6d8a2624ade323262d00227c9818bb33de1e6e708b6fbbab68bdbafb95bb8b34"
 
       def install
         bin.install "lametric"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/lametric-cli/releases/download/v0.1.0/lametric_darwin_arm64.tar.gz"
-      sha256 "1a9a39cebda0dceb08d416ef8981a5ef489993d418b51722b2f00c7e79d97b26"
+      url "https://github.com/dedene/lametric-cli/releases/download/v0.1.1/lametric_darwin_arm64.tar.gz"
+      sha256 "d218b6c5467c433fd9673ddda6c784963a8d6d4d139e714cb9445c1276b4ac40"
 
       def install
         bin.install "lametric"
@@ -29,15 +29,15 @@ class Lametric < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/lametric-cli/releases/download/v0.1.0/lametric_linux_amd64.tar.gz"
-      sha256 "d3255d9b35d388781ecc884f58552f31b3c35a2c31e2fa442338c367b86c400f"
+      url "https://github.com/dedene/lametric-cli/releases/download/v0.1.1/lametric_linux_amd64.tar.gz"
+      sha256 "2d0272a688ddcff33c94007bfe787ae56882b46fc9e5ec3366003e54a30e8919"
       def install
         bin.install "lametric"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/lametric-cli/releases/download/v0.1.0/lametric_linux_arm64.tar.gz"
-      sha256 "519f00fa473744eb199f70a9b3631aa7f67fd2943fa93b9d3f08e7476fc14e4c"
+      url "https://github.com/dedene/lametric-cli/releases/download/v0.1.1/lametric_linux_arm64.tar.gz"
+      sha256 "1fb05759a400815f651e7d08d8adb83cedcf1387eef7f6d6077b0d55b6b4695b"
       def install
         bin.install "lametric"
       end
