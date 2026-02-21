@@ -5,21 +5,21 @@
 class ClawWrap < Formula
   desc "Credential proxy for CLI tools — secrets never enter the sandbox"
   homepage "https://github.com/dedene/claw-wrap"
-  version "0.4.3"
+  version "0.4.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/claw-wrap/releases/download/v0.4.3/claw-wrap_0.4.3_darwin_amd64.tar.gz"
-      sha256 "ddc867dd70cca4bb98d1de74ceca66d2cec4da5fdfa5125d669414fa22f7abc4"
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.4.4/claw-wrap_0.4.4_darwin_amd64.tar.gz"
+      sha256 "7ba56917c1323027264a604e4372ade9f95a2171bb5088df44640021bdfc9c8c"
 
       def install
         bin.install "claw-wrap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/claw-wrap/releases/download/v0.4.3/claw-wrap_0.4.3_darwin_arm64.tar.gz"
-      sha256 "905896cae1f361ccb088f7df1bb2de7fa28a84e89eeaafdc1fee27fa51e3c1b4"
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.4.4/claw-wrap_0.4.4_darwin_arm64.tar.gz"
+      sha256 "7595212f85bd70526ac9cd14e55c0a965475cfb5e4f1aba356967983f3c9c81d"
 
       def install
         bin.install "claw-wrap"
@@ -29,15 +29,15 @@ class ClawWrap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/claw-wrap/releases/download/v0.4.3/claw-wrap_0.4.3_linux_amd64.tar.gz"
-      sha256 "437bff5ac42454d3b93e326c545397578f220c0cc64e94db9c56234dfea655dc"
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.4.4/claw-wrap_0.4.4_linux_amd64.tar.gz"
+      sha256 "2b90436d65176898c3124a3a9e0e77193d45267980bce6af509b6118a9428b73"
       def install
         bin.install "claw-wrap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/claw-wrap/releases/download/v0.4.3/claw-wrap_0.4.3_linux_arm64.tar.gz"
-      sha256 "1db367b5923f7b9b8c8a3fb147d66145406cfa40dc965ab25d80991f02c6eb87"
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.4.4/claw-wrap_0.4.4_linux_arm64.tar.gz"
+      sha256 "ce11e7a024bd9cb1d9b8831125f3ff407f9138bc6902a811c3af45a63782c8a3"
       def install
         bin.install "claw-wrap"
       end
