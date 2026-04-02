@@ -5,23 +5,23 @@
 class PontoCli < Formula
   desc "CLI for Ponto banking API - manage accounts, transactions, and syncs"
   homepage "https://github.com/dedene/ponto-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/ponto-cli/releases/download/v0.1.0/ponto-cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "e1b561f5fbcf7bba80dfdedaf797f03e8cc4e1e50b7de2392ddf9adb0edc9a5c"
+      url "https://github.com/dedene/ponto-cli/releases/download/v0.1.1/ponto-cli_0.1.1_darwin_amd64.tar.gz"
+      sha256 "fcff97a92a1c4a60c7e6dcc491fc90379c20eeb560f931b725524ff2db418441"
 
-      def install
+      define_method(:install) do
         bin.install "ponto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/ponto-cli/releases/download/v0.1.0/ponto-cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "7d5c058afdc41e90f3b3b8df133153b627a36dfcb1f9853787e9e9b273fc4d77"
+      url "https://github.com/dedene/ponto-cli/releases/download/v0.1.1/ponto-cli_0.1.1_darwin_arm64.tar.gz"
+      sha256 "465b799438217b130effc34a952e966a5280b1281554080499b611717e806c66"
 
-      def install
+      define_method(:install) do
         bin.install "ponto"
       end
     end
@@ -29,16 +29,16 @@ class PontoCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/ponto-cli/releases/download/v0.1.0/ponto-cli_0.1.0_linux_amd64.tar.gz"
-      sha256 "7689903d257ff20877a57d5bfc4e452b4f953282f12b19d454a68638e686ef2c"
-      def install
+      url "https://github.com/dedene/ponto-cli/releases/download/v0.1.1/ponto-cli_0.1.1_linux_amd64.tar.gz"
+      sha256 "9d1015eb538e7fd8bdff60c067c98d1b4438bc1dac70dbc14b091eb4a558d890"
+      define_method(:install) do
         bin.install "ponto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/ponto-cli/releases/download/v0.1.0/ponto-cli_0.1.0_linux_arm64.tar.gz"
-      sha256 "173feebf4b49fe51cd729c7ae2efebda404839d693d9d5ab0f4811277bffb4b8"
-      def install
+      url "https://github.com/dedene/ponto-cli/releases/download/v0.1.1/ponto-cli_0.1.1_linux_arm64.tar.gz"
+      sha256 "3d2e88001a9cb1391c8cae2e503c13bf4ecb9e5ff9b15b0d1b2b81d1df8b564f"
+      define_method(:install) do
         bin.install "ponto"
       end
     end
