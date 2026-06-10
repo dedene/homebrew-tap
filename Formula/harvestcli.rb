@@ -5,23 +5,23 @@
 class Harvestcli < Formula
   desc "Harvest time tracking CLI"
   homepage "https://github.com/dedene/harvest-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/harvest-cli/releases/download/v0.1.0/harvest-cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "3dad341cf9d7d175dec57b97b121573da208b8acdae75d775ee936a6b4a88711"
+      url "https://github.com/dedene/harvest-cli/releases/download/v0.1.1/harvest-cli_0.1.1_darwin_amd64.tar.gz"
+      sha256 "d3e3996555dc3099c38c6ab894676ec4e35c43758afcb9ba60c9f2a4be1a6c75"
 
-      def install
+      define_method(:install) do
         bin.install "harvest"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/harvest-cli/releases/download/v0.1.0/harvest-cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "b20ca41af56c46043ccbff9dad4b0bb9d7e0a73ba36c185dabacfd8f1d7ba1ee"
+      url "https://github.com/dedene/harvest-cli/releases/download/v0.1.1/harvest-cli_0.1.1_darwin_arm64.tar.gz"
+      sha256 "645b77b1b72ec2d68de1bf1829c61e5ca202614f76de24956d889655c0b37f05"
 
-      def install
+      define_method(:install) do
         bin.install "harvest"
       end
     end
@@ -29,16 +29,16 @@ class Harvestcli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/harvest-cli/releases/download/v0.1.0/harvest-cli_0.1.0_linux_amd64.tar.gz"
-      sha256 "4255326323a6a81dff3cf5c507cd070f814b89d402209d145297a38482d210ed"
-      def install
+      url "https://github.com/dedene/harvest-cli/releases/download/v0.1.1/harvest-cli_0.1.1_linux_amd64.tar.gz"
+      sha256 "824a02f8fa3942cf7802c17f198283ce8c933fa9b3087ec0fa54cc3957f8634a"
+      define_method(:install) do
         bin.install "harvest"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/harvest-cli/releases/download/v0.1.0/harvest-cli_0.1.0_linux_arm64.tar.gz"
-      sha256 "c36cb7500169cfa8c4953cf586806c1f29e043be479adedf016048359f5d2b66"
-      def install
+      url "https://github.com/dedene/harvest-cli/releases/download/v0.1.1/harvest-cli_0.1.1_linux_arm64.tar.gz"
+      sha256 "4960114bda23d3e3a1b3ace1bf585ec8e83d6131b455e24ca456ba577473cd84"
+      define_method(:install) do
         bin.install "harvest"
       end
     end
