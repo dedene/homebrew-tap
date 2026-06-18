@@ -5,21 +5,21 @@
 class Rr < Formula
   desc "RealtimeRegister CLI - Domain management from the command line"
   homepage "https://github.com/dedene/realtime-register-cli"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/realtime-register-cli/releases/download/v0.1.4/rr_0.1.4_darwin_amd64.tar.gz"
-      sha256 "b3657d7f106253e7f4b9a0996bf3e2c9c0c4617baa385e932f8a45a5be31dce1"
+      url "https://github.com/dedene/realtime-register-cli/releases/download/v0.1.5/rr_0.1.5_darwin_amd64.tar.gz"
+      sha256 "e5db033f23eba1a68a1920dd40e597b58350e592fb6426250004c0e9b0dc3ee7"
 
       define_method(:install) do
         bin.install "rr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/realtime-register-cli/releases/download/v0.1.4/rr_0.1.4_darwin_arm64.tar.gz"
-      sha256 "592a64d6988e780f1d2e6fda3ed745f9132159926f2a26bd3ad32f06a6799187"
+      url "https://github.com/dedene/realtime-register-cli/releases/download/v0.1.5/rr_0.1.5_darwin_arm64.tar.gz"
+      sha256 "69d8b193a3f4c9d68803c7f0f1cefbf8294554c88fff2549123ae11fcd1e7b73"
 
       define_method(:install) do
         bin.install "rr"
@@ -29,15 +29,15 @@ class Rr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/realtime-register-cli/releases/download/v0.1.4/rr_0.1.4_linux_amd64.tar.gz"
-      sha256 "0e86313270490fbb870be846e9ec02f31b6757862a7bd8b5e885f68fe29b045d"
+      url "https://github.com/dedene/realtime-register-cli/releases/download/v0.1.5/rr_0.1.5_linux_amd64.tar.gz"
+      sha256 "ab9b5727dfad63db3bf71ff9147b578f1bc851ad67c87bc4dd92f32b62987dfb"
       define_method(:install) do
         bin.install "rr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/realtime-register-cli/releases/download/v0.1.4/rr_0.1.4_linux_arm64.tar.gz"
-      sha256 "518389817be110cd4e2dbb345670ccea189d8b1acfe3b156da8c856b9c6584f9"
+      url "https://github.com/dedene/realtime-register-cli/releases/download/v0.1.5/rr_0.1.5_linux_arm64.tar.gz"
+      sha256 "7066de8d318b4115a816224a93b185be5aeda5a075a50498ffd162caa6404261"
       define_method(:install) do
         bin.install "rr"
       end
