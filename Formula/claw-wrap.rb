@@ -5,23 +5,23 @@
 class ClawWrap < Formula
   desc "Credential proxy for CLI tools — secrets never enter the sandbox"
   homepage "https://github.com/dedene/claw-wrap"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dedene/claw-wrap/releases/download/v0.5.0/claw-wrap_0.5.0_darwin_amd64.tar.gz"
-      sha256 "44a33c016179e32d0b8fb27dcad8eb1fbf1c3f6149f860565343c30b6b8041ee"
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.6.0/claw-wrap_0.6.0_darwin_amd64.tar.gz"
+      sha256 "d01eaa391366d1e10031950976cef706b33c35e9bb243376c9581124a01cdf76"
 
-      def install
+      define_method(:install) do
         bin.install "claw-wrap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/claw-wrap/releases/download/v0.5.0/claw-wrap_0.5.0_darwin_arm64.tar.gz"
-      sha256 "a648a1044a0bd1c67e8708cbfb0cdc8db3a9e04ab6376dfc1601a019152e9268"
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.6.0/claw-wrap_0.6.0_darwin_arm64.tar.gz"
+      sha256 "b451c5b541194e9369360a3d6f74f267a24da94d655a0b754b3c3855fc89fb8e"
 
-      def install
+      define_method(:install) do
         bin.install "claw-wrap"
       end
     end
@@ -29,16 +29,16 @@ class ClawWrap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/claw-wrap/releases/download/v0.5.0/claw-wrap_0.5.0_linux_amd64.tar.gz"
-      sha256 "b99eb7af532c7ea72e5078c58ea32522c48e2de00ab8fc4f75f57c6608ce9af7"
-      def install
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.6.0/claw-wrap_0.6.0_linux_amd64.tar.gz"
+      sha256 "ad6aa09363b158a285035aff8920207a61cb7f578872ecb3b5934e66e51673e8"
+      define_method(:install) do
         bin.install "claw-wrap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/claw-wrap/releases/download/v0.5.0/claw-wrap_0.5.0_linux_arm64.tar.gz"
-      sha256 "26d1485ebd1e24161b8003084f554d5c49213a516514450cc3548ebdef66aa22"
-      def install
+      url "https://github.com/dedene/claw-wrap/releases/download/v0.6.0/claw-wrap_0.6.0_linux_arm64.tar.gz"
+      sha256 "e8cb5fff8a87f71d93850249bc276796490c6f29c1f6cb192a08f2d913279a80"
+      define_method(:install) do
         bin.install "claw-wrap"
       end
     end
