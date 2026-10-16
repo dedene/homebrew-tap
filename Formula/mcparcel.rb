@@ -5,13 +5,13 @@
 class Mcparcel < Formula
   desc "Local MCP runtime with 1Password-backed credentials and team catalogs"
   homepage "https://github.com/dedene/mcparcel"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dedene/mcparcel/releases/download/v0.1.0/mcparcel_0.1.0_darwin_arm64.tar.gz"
-      sha256 "78bc12117385603b3f0da617164a3b413ca617a454227980fa92d444c9122f32"
+      url "https://github.com/dedene/mcparcel/releases/download/v0.2.0/mcparcel_0.2.0_darwin_arm64.tar.gz"
+      sha256 "96975b32a2519affde1c0f4b0a32c3049948547a34951e096101510d382514d5"
 
       define_method(:install) do
         bin.install "mcparcel"
@@ -21,15 +21,15 @@ class Mcparcel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/mcparcel/releases/download/v0.1.0/mcparcel_0.1.0_linux_amd64.tar.gz"
-      sha256 "55da6ab77a9ae410e978be387c0405ab51d470f46ebff10be60f4f13dda892ee"
+      url "https://github.com/dedene/mcparcel/releases/download/v0.2.0/mcparcel_0.2.0_linux_amd64.tar.gz"
+      sha256 "412584e67ae7b254368630c493cdabe489e59351f5f2a0820f958127e5610a0c"
       define_method(:install) do
         bin.install "mcparcel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dedene/mcparcel/releases/download/v0.1.0/mcparcel_0.1.0_linux_arm64.tar.gz"
-      sha256 "b43c71c1405d4f46c1b7743a9d9d0feb3e51beb7f5be0550c04c6a7bf9e503ab"
+      url "https://github.com/dedene/mcparcel/releases/download/v0.2.0/mcparcel_0.2.0_linux_arm64.tar.gz"
+      sha256 "fde175d5b6aceeffc7423c2b18eca9b464c5bf246c90e3b63e22881743113d87"
       define_method(:install) do
         bin.install "mcparcel"
       end
